@@ -17,7 +17,11 @@ If you get the DOCUMENT_TOO_LARGE_TO_EDIT error, congrats, you have bricked your
 ```py
 pip install gspread
 ```
-
+Then, set the environment variables for Google Sheets auth
+```bash
+export GSHEETS_PRIVATE_KEY=foobar
+export GSHEETS_CLIENT_EMAIL=boobaz@iam.gserviceaccount.com
+```
 ### Usage
 
 You'll need:
