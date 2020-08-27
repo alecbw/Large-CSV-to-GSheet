@@ -46,6 +46,7 @@ if __name__ == "__main__":
     filename = "Datafile.csv"
     gsheet_tab = "Uplaod_Tab"
     gsheet_name = "GSpread Testing Sheet"
+    batch_amount = 1000
 
     input_lol = read_csv_as_lol(
         filename,
@@ -60,7 +61,7 @@ if __name__ == "__main__":
 
         batch_lol.append(row)
 
-        if n != 0 and n % 500 == 0:
+        if n != 0 and n % batch_amount == 0:
             logging.info(f"We are now on row {n + start_at}")
             append_lol_to_gsheet_tab(gsheet_name, gsheet_tab, batch_lol)
             sleep(0.5)
